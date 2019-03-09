@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		3404C3D0222ADB36008B7AE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404C3CF222ADB36008B7AE6 /* AppDelegate.swift */; };
-		3404C3D2222ADB36008B7AE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404C3D1222ADB36008B7AE6 /* ViewController.swift */; };
+		3404C3D2222ADB36008B7AE6 /* SymbolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404C3D1222ADB36008B7AE6 /* SymbolTableViewController.swift */; };
 		3404C3D5222ADB36008B7AE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3404C3D3222ADB36008B7AE6 /* Main.storyboard */; };
 		3404C3D7222ADB37008B7AE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3404C3D6222ADB37008B7AE6 /* Assets.xcassets */; };
 		3404C3DA222ADB37008B7AE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3404C3D8222ADB37008B7AE6 /* LaunchScreen.storyboard */; };
+		349007D2222B0C86008189AE /* SymbolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349007D1222B0C86008189AE /* SymbolDetailViewController.swift */; };
+		349007D4222B15E9008189AE /* SymbolDetailTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349007D3222B15E9008189AE /* SymbolDetailTableHeaderView.swift */; };
+		349007D6222B164F008189AE /* SymbolDetailTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349007D5222B164F008189AE /* SymbolDetailTableHeaderView.xib */; };
+		349007D8222B2DCE008189AE /* CurrencyPairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349007D7222B2DCE008189AE /* CurrencyPairTableViewCell.swift */; };
+		7354A8D18C9285FCF3C2C2B5 /* Pods_Forex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621E78F91512BFF449C799D8 /* Pods_Forex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3404C3CC222ADB36008B7AE6 /* Forex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3404C3CF222ADB36008B7AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3404C3D1222ADB36008B7AE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3404C3D1222ADB36008B7AE6 /* SymbolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTableViewController.swift; sourceTree = "<group>"; };
 		3404C3D4222ADB36008B7AE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3404C3D6222ADB37008B7AE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3404C3D9222ADB37008B7AE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3404C3DB222ADB37008B7AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		349007D1222B0C86008189AE /* SymbolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetailViewController.swift; sourceTree = "<group>"; };
+		349007D3222B15E9008189AE /* SymbolDetailTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetailTableHeaderView.swift; sourceTree = "<group>"; };
+		349007D5222B164F008189AE /* SymbolDetailTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymbolDetailTableHeaderView.xib; sourceTree = "<group>"; };
+		349007D7222B2DCE008189AE /* CurrencyPairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairTableViewCell.swift; sourceTree = "<group>"; };
+		621E78F91512BFF449C799D8 /* Pods_Forex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92C6FF6313B3665220DC4C7 /* Pods-Forex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forex.release.xcconfig"; path = "Target Support Files/Pods-Forex/Pods-Forex.release.xcconfig"; sourceTree = "<group>"; };
+		E6F714FD4FBBB1739580EF91 /* Pods-Forex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forex.debug.xcconfig"; path = "Target Support Files/Pods-Forex/Pods-Forex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7354A8D18C9285FCF3C2C2B5 /* Pods_Forex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16F009C5732817B82D935B34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6F714FD4FBBB1739580EF91 /* Pods-Forex.debug.xcconfig */,
+				C92C6FF6313B3665220DC4C7 /* Pods-Forex.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3404C3C3222ADB36008B7AE6 = {
 			isa = PBXGroup;
 			children = (
 				3404C3CE222ADB36008B7AE6 /* Forex */,
 				3404C3CD222ADB36008B7AE6 /* Products */,
+				16F009C5732817B82D935B34 /* Pods */,
+				ADFF001244204013C8E41E9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +79,25 @@
 			isa = PBXGroup;
 			children = (
 				3404C3CF222ADB36008B7AE6 /* AppDelegate.swift */,
-				3404C3D1222ADB36008B7AE6 /* ViewController.swift */,
+				3404C3D1222ADB36008B7AE6 /* SymbolTableViewController.swift */,
+				349007D1222B0C86008189AE /* SymbolDetailViewController.swift */,
+				349007D7222B2DCE008189AE /* CurrencyPairTableViewCell.swift */,
 				3404C3D3222ADB36008B7AE6 /* Main.storyboard */,
+				349007D3222B15E9008189AE /* SymbolDetailTableHeaderView.swift */,
+				349007D5222B164F008189AE /* SymbolDetailTableHeaderView.xib */,
 				3404C3D6222ADB37008B7AE6 /* Assets.xcassets */,
 				3404C3D8222ADB37008B7AE6 /* LaunchScreen.storyboard */,
 				3404C3DB222ADB37008B7AE6 /* Info.plist */,
 			);
 			path = Forex;
+			sourceTree = "<group>";
+		};
+		ADFF001244204013C8E41E9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				621E78F91512BFF449C799D8 /* Pods_Forex.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3404C3DE222ADB37008B7AE6 /* Build configuration list for PBXNativeTarget "Forex" */;
 			buildPhases = (
+				C9F2B46A5BE2430976B65082 /* [CP] Check Pods Manifest.lock */,
 				3404C3C8222ADB36008B7AE6 /* Sources */,
 				3404C3C9222ADB36008B7AE6 /* Frameworks */,
 				3404C3CA222ADB36008B7AE6 /* Resources */,
+				F35D6C4D27AB0D437FD991B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3404C3DA222ADB37008B7AE6 /* LaunchScreen.storyboard in Resources */,
+				349007D6222B164F008189AE /* SymbolDetailTableHeaderView.xib in Resources */,
 				3404C3D7222ADB37008B7AE6 /* Assets.xcassets in Resources */,
 				3404C3D5222ADB36008B7AE6 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +169,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C9F2B46A5BE2430976B65082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Forex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F35D6C4D27AB0D437FD991B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Forex/Pods-Forex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Forex/Pods-Forex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3404C3C8222ADB36008B7AE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3404C3D2222ADB36008B7AE6 /* ViewController.swift in Sources */,
+				3404C3D2222ADB36008B7AE6 /* SymbolTableViewController.swift in Sources */,
 				3404C3D0222ADB36008B7AE6 /* AppDelegate.swift in Sources */,
+				349007D8222B2DCE008189AE /* CurrencyPairTableViewCell.swift in Sources */,
+				349007D2222B0C86008189AE /* SymbolDetailViewController.swift in Sources */,
+				349007D4222B15E9008189AE /* SymbolDetailTableHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +369,7 @@
 		};
 		3404C3DF222ADB37008B7AE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F714FD4FBBB1739580EF91 /* Pods-Forex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +388,7 @@
 		};
 		3404C3E0222ADB37008B7AE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92C6FF6313B3665220DC4C7 /* Pods-Forex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

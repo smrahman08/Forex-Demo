@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymbolDetailTableHeaderView" customModule="Forex" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SymbolDetailTableHeaderView" customModule="Forex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQV-Up-U3O">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.22352941179999999" blue="0.27058823529999998" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FX Pair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkY-Ki-dla">
+                    <rect key="frame" x="20" y="0.0" width="47" height="50"/>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aj-mu-TUk">
+                    <rect key="frame" x="330.5" y="0.0" width="24.5" height="50"/>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-BoldItalic" family="Avenir Next Condensed" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npn-bj-EAk">
+                    <rect key="frame" x="176.5" y="0.0" width="22.5" height="50"/>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-BoldItalic" family="Avenir Next Condensed" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YQV-Up-U3O" secondAttribute="trailing" id="1U0-Cc-uVd"/>
+                <constraint firstItem="Npn-bj-EAk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8vZ-If-sAw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0aj-mu-TUk" secondAttribute="bottom" id="FCf-GC-FRw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0aj-mu-TUk" secondAttribute="trailing" constant="20" id="Qdf-Hs-n09"/>
+                <constraint firstItem="YQV-Up-U3O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RVR-C1-Yfe"/>
+                <constraint firstAttribute="bottom" secondItem="YQV-Up-U3O" secondAttribute="bottom" id="W3T-lV-7oY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KkY-Ki-dla" secondAttribute="bottom" id="a2v-fh-8dK"/>
+                <constraint firstItem="KkY-Ki-dla" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="aOV-Zh-iEo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Npn-bj-EAk" secondAttribute="bottom" id="aTm-LL-lK7"/>
+                <constraint firstItem="YQV-Up-U3O" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bGb-6V-Ngg"/>
+                <constraint firstItem="KkY-Ki-dla" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ecg-KP-WQy"/>
+                <constraint firstItem="Npn-bj-EAk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="l10-6y-fhS"/>
+                <constraint firstItem="0aj-mu-TUk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="r4U-iC-d0R"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="144.80000000000001" y="248.27586206896552"/>
+        </view>
+    </objects>
+</document>
