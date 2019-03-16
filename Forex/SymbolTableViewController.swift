@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Firebase
 //can be in seperate swift file
 extension UISearchController {
     var searchBarIsEmpty: Bool {
@@ -23,11 +24,23 @@ extension UISearchController {
 
 
 //Declare Conformance
-class SymbolTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+class SymbolTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, SymbolTableViewCellDelegate {
+    
+    
+    func symbolTableViewCellValueDidChange(_ cell: SymbolTableViewCell) {
+        let symbol = cell.titleLabel.text!
+        let value = cell.favoriteSwitch.isOn
+        favoritesData[symbol] = value
+    db.collection("favorites").document("currentUser").updateData(favoritesData)
+    }
+    
     
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var doneBarButtonItem: UIBarButtonItem!
+    
+    lazy var db = Firestore.firestore()
+    var favoritesData: [String: Bool] = [:]
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -53,11 +66,13 @@ class SymbolTableViewController: UIViewController, UITableViewDelegate, UITableV
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
-        //
+        //Adding Database Stuff Example
+        //db.collection("favorites").addDocument(data: ["EURUSD" : true, "USDJPY": false])
+        db.collection("favorites").document("currentUser").addSnapshotListener {(snapshot, error) in
+        self.favoritesData = snapshot?.data() as? [String: Bool] ?? [:]
+            self.tableView.reloadData()
+        }
         
-        tableView.register(UITableViewCell.self,
-                           forCellReuseIdentifier: "SymbolTableViewCell"
-        )
         let urlString = "https://forex.1forge.com/1.0.3/symbols?api_key=scKdc5njprJwBjonYn417rDniGrve9aM"
         Alamofire.request(urlString).responseJSON { response in
             /// Count Number of Rows I think
@@ -99,11 +114,14 @@ class SymbolTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SymbolTableViewCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SymbolTableViewCell") as! SymbolTableViewCell
+        let symbol: String = searchController.isFiltering ? filteredSymbols[indexPath.row] : symbols[indexPath.row] // version3 with fb
         //1 Original
         // cell.textLabel?.text = symbols[indexPath.row]
-        //2 Upadted for Search
-        cell.textLabel?.text = searchController.isFiltering ? filteredSymbols[indexPath.row] : symbols[indexPath.row]
+        cell.titleLabel?.text = symbol
+        // adding fav switch
+        cell.favoriteSwitch.isOn = favoritesData[symbol] ?? false
+        cell.delegate = self
         //Start selection stuff
         cell.selectionStyle = .none
         let cellIsSelected = tableView.indexPathsForSelectedRows?.contains(indexPath) ?? false

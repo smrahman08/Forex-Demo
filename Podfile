@@ -7,5 +7,10 @@ target 'Forex' do
 
   # Pods for Forex
 pod 'Alamofire'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'FirebaseUI'
+pod 'Firebase/Messaging'
+pod 'Firebase/Database'
 
 end
